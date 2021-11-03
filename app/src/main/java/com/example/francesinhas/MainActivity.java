@@ -3,7 +3,9 @@ package com.example.francesinhas;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +18,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findViews();
+        cardOnClick();
+    }
 
+    private void cardOnClick() {
+
+        // Quando se carrega na Card
+        startersCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent startersActivityIntent = new Intent(MainActivity.this, StarterActivity.class);
+
+                startActivity(startersActivityIntent);
+            }
+        });
     }
 
     private void findViews(){
