@@ -17,6 +17,9 @@ public class StarterActivity extends AppCompatActivity {
 
         findViews();
 
+        Dish dishOne = new Dish("Francesinha Hamburgo","10/10",999);
+
+
         String[] dishes = {
                 "Francesinha Hamburgo",
                 "Francesinha Café D.joão",
