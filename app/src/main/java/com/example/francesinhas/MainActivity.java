@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     CardView startersCard;
     CardView mainsCard;
+    CardView dessertsCard;
     TextView emailTextVIew;
 
     @Override
@@ -58,12 +59,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(mainCoursesActivityIntent);
             }
         });
+
+        dessertsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dessertsActivity = new Intent(MainActivity.this, DessertsActivity.class);
+
+                startActivity(dessertsActivity);
+            }
+        });
     }
 
     private void findViews(){
 
         startersCard = findViewById(R.id.card_view_starters);
         mainsCard = findViewById(R.id.card_view_mains);
+        dessertsCard = findViewById(R.id.card_view_desserts);
         emailTextVIew = findViewById(R.id.text_view_email_address);
     }
 }
