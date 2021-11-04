@@ -17,33 +17,21 @@ public class StarterActivity extends AppCompatActivity {
 
         findViews();
 
-        Dish dishOne = new Dish("Francesinha Hamburgo","10/10",999);
-
-
-        String[] dishes = {
-                "Francesinha Hamburgo",
-                "Francesinha Café D.joão",
-                "Francesinha Santiago",
-                "Francesinha Farao",
-                "Francesinha Lado B",
-                "Francesinha Locanda",
-                "Francesinha Londrina",
-                "Francesinha Taberna Belga",
-                "Francesinha Hamburgo",
-                "Francesinha com alface",
-                "Francesinha Yoko",
-                "Francesinha Brasão",
-                "Francesinha Santiago II",
-                "Francesinha Olivier",
-                "Francesinha Rosa",
-                "Francesinha Vegetariana",
-                "Francesinha Económica",
-                "Meia Francesinha",
-                "Francesinha Casino",
-                "Francesinha Golfinho",
+        Dish[] dishes = {
+                new Dish("Asas de frango","5/10",800),
+                new Dish("Picapau","8/10",599),
+                new Dish("Rissois","8/10",400),
+                new Dish("Azeitonas","2/10",300),
+                new Dish("Nachos","4/10",700),
+                new Dish("Pate","6/10",150),
+                new Dish("Queijo","7/10",500),
+                new Dish("Nuggets","6/10",700),
+                new Dish("Douradinhos","2/10",550),
+                new Dish("Rojões","7/10",700),
         };
 
-        ArrayAdapter<String> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dishes);
+
+        ArrayAdapter<Dish> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dishes);
 
         startersList.setAdapter(dishesAdapter);
 
